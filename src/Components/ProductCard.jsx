@@ -21,12 +21,12 @@ function ProductCard({ price, image, name, quantity }) {
             </div>
 
             {/* Product Name */}
-            <div className='text-[#1f1f1f] font-semibold text-xs sm:text-sm line-clamp-2 min-h-[38px]'>
+            <div className='text-[#1f1f1f] font-semibold text-xs sm:text-sm line-clamp-2 min-h-9.5'>
                 {name}
             </div>
 
             {/* Quantity */}
-            <div className='text-[11px] sm:text-xs text-gray-600 min-h-[20px]'>
+            <div className='text-[11px] sm:text-xs text-gray-600 min-h-5'>
                 {quantity}
             </div>
 
