@@ -14,22 +14,7 @@ function SlideProduct({ products, title }) {
         swipeToSlide: true,
         slidesToShow: 6,
         slidesToScroll: 2,
-
         responsive: [
-            {
-                breakpoint: 1536,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 1280,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 2,
-                }
-            },
             {
                 breakpoint: 1024,
                 settings: {
@@ -40,14 +25,7 @@ function SlideProduct({ products, title }) {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2.3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 640,
-                settings: {
-                    slidesToShow: 1.8,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     arrows: false,
                 }
@@ -55,7 +33,7 @@ function SlideProduct({ products, title }) {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1.4,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: false,
                 }
@@ -68,12 +46,17 @@ function SlideProduct({ products, title }) {
                 <div className='py-3 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold'>{title}</div>
                 <div className='text-sm sm:text-base md:text-lg text-[#0c831f] font-okra'>see all</div>
             </div>
-            <Slider {...settings}>
+            <Slider key={products.length} {...settings}>
                 {
                     products.map((data, index) => {
                         return (
-                            <ProductCard key={index} name={data.name} image={data.images[0]} price={data.price} quantity={data.quantity} />
-
+                            <ProductCard
+                                key={index}
+                                name={data.name}
+                                image={data.images[0]}
+                                price={data.price}
+                                quantity={data.quantity}
+                            />
                         )
                     })
                 }
