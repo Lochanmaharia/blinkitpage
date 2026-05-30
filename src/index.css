@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+
+
+/* Button design */
+.slick-prev,
+.slick-next {
+  width: 34px !important;
+  height: 34px !important;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+  z-index: 2;
+}
+
+/* Arrow shape */
+.slick-prev::after,
+.slick-next::after {
+  content: '';
+  border: solid black;
+}
+
+/* Direction */
+.slick-prev::after {
+  transform: rotate(135deg);
+}
+
+.slick-next::after {
+  transform: rotate(-45deg);
+}
+
+
+/* Arrow size */
+.slick-prev::after,
+.slick-next::after {
+  width: 9px;
+  height: 9px;
+  border-width: 0 2px 2px 0;
+}
+
+.slick-prev::after {
+  position: absolute;
+  top: 36%;
+  left: 41%;
+
+}
+
+.slick-next::after {
+  position: absolute;
+  top: 36%;
+  left: 34%;
+}
+
+.ff-okra{
+   font-family: "Montserrat", sans-serif;
+}
