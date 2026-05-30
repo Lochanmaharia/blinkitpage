@@ -24,18 +24,33 @@ function Category() {
         { name: "Snacks & Munchies", image: "https://cdn.grofers.com/da/cms-assets/cms/product/2a55bb8b-bf09-454b-9233-cc00404c6a5c.png" },
         { name: "Wafer Chocolates", image: "https://cdn.grofers.com/da/cms-assets/cms/product/d2a6ef1e-2951-47a4-853b-798de2c8b4b9.png" }
     ];
+
     return (
-        <div className="max-w-7xl gap-6 mx-auto px-4 grid grid-cols-3 md:grid-cols-5 lg:grid-cols-10 mt-8 my-4">
-            {
-                categories.map((data, index) => (
-                    <div key={index}>
-                        <div className='bg-[#ecf5fe] rounded-xl p-1'>
-                            <img className='w-full' src={data.image} alt="" />
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 mt-6 md:mt-8">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 gap-3 md:gap-5">
+                {
+                    categories.map((data, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center cursor-pointer transition-all duration-300 hover:scale-105">
+                            <div
+                                className=" bg-[#ecf5fe] rounded-2xl p-2 md:p-3 w-full flex justify-center items-center">
+                                <img
+                                    className="w-full max-w-[90px] md:max-w-[110px] object-contain"
+                                    src={data.image}
+                                    alt={data.name}
+                                />
+                            </div>
+
+                            <h6
+                                className=" mt-2 md:mt-3 text-center text-[11px] sm:text-xs md:text-sm font-medium text-gray-800 line-clamp-2 min-h-[32px]">
+                                {data.name}
+                            </h6>
                         </div>
-                        <h6 className='mx-auto mt-3.5 text-center'>{data.name}</h6>
-                    </div>
-                ))
-            }
+                    ))
+                }
+            </div>
+
         </div>
     )
 }

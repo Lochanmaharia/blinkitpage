@@ -1,25 +1,46 @@
 import React from 'react'
 import { IoTimeOutline } from "react-icons/io5";
 
-
 function ProductCard({ price, image, name, quantity }) {
     return (
-        <div className=' bg-white border border-gray-200 rounded-lg text-sm flex flex-col m-2 gap-2 p-3 '>
-            <img className='w-30 mx-auto' src={image} alt="" />
+        <div className='bg-white border border-gray-200 rounded-lg flex flex-col gap-2 p-2 sm:p-3 mx-1 sm:mx-2 hover:shadow-md transition-shadow duration-200'>
 
-            <div className=' bg-[#F8F8F8] flex w-12.5 gap-0.5 rounded-sm justify-center font-bold text-[9px] text-[#363636]'>
-                <IoTimeOutline className='mt-px font-extrabold' />
-                <span className='rounded-sm  gap-0.5 '>8 MINS</span>
+            {/* Product Image */}
+            <div className='flex justify-center items-center h-24 sm:h-28 md:h-32 lg:h-36'>
+                <img
+                    className='max-h-full w-auto object-contain'
+                    src={image}
+                    alt={name}
+                />
             </div>
-            <div className=' overflow-hidden text-[#1f1f1f] font-semibold text-[13px] line-clamp-2 leading-4.5 w-full h-9 mb-1.5' >{name}</div>
-            <div className='flex items-center h-6.5 w-full'>
-                <span className="text-[12px] leading-none">{quantity}</span>
-            </div>
-            <div className='flex justify-between items-center p-0 -mt-1'>
 
-                <div className='text-[rgb(31, 31, 31)] font-semibold text-xs'>₹{price}</div>
-                <button className='bg-green-50 px-4 py-1 rounded-lg border border-[#0c831f] font-medium text-[#0c831f]'>ADD</button>
+            {/* Delivery Time */}
+            <div className='bg-[#F8F8F8] flex items-center w-fit px-1.5 py-0.5 gap-1 rounded-sm font-bold text-[9px] sm:text-[10px] text-[#363636]'>
+                <IoTimeOutline />
+                <span>8 MINS</span>
             </div>
+
+            {/* Product Name */}
+            <div className='text-[#1f1f1f] font-semibold text-xs sm:text-sm line-clamp-2 min-h-[38px]'>
+                {name}
+            </div>
+
+            {/* Quantity */}
+            <div className='text-[11px] sm:text-xs text-gray-600 min-h-[20px]'>
+                {quantity}
+            </div>
+
+            {/* Price & Button */}
+            <div className='flex justify-between items-center mt-auto'>
+                <div className='text-[#1f1f1f] font-semibold text-sm sm:text-base'>
+                    ₹{price}
+                </div>
+
+                <button className='bg-green-50 px-3 sm:px-4 py-1 rounded-lg border border-[#0c831f] font-semibold text-[#0c831f] text-xs sm:text-sm hover:bg-green-100 transition-colors'>
+                    ADD
+                </button>
+            </div>
+
         </div>
     )
 }

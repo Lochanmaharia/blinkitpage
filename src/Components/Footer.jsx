@@ -2,9 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='hidden lg:block max-w-7xl mx-auto m-12 ff-okra'>
+    <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8 font-okra'>
       <footer className='w-auto mt-5 mb-10 m-auto '>
-        <div className='grid gap-6 grid-cols-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 
           {/* Useful Links */}
           <div className='col-span-1 '>
@@ -106,7 +106,7 @@ function Footer() {
         </div>
       </footer>
       <div className='flex justify-center items-center w-auto bg-[rgb(252,252,252)] max-w-full'>
-        <div className='py-4 w-auto max-w-7xl grid grid-cols-3'>
+        <div className='py-6 max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {/*registration  */}
           <div className='flex justify-start items-center flex-wrap w-full text-[12px] h-12 text-gray-500 '>© Blink Commerce Private Limited, 2016-2026</div>
           {/* Download from here */}
