@@ -60,13 +60,16 @@ function App() {
 
       </div>
       <Category />
-      <SlideProduct products={product} title="All Products" />
-      <SlideProduct products={Wafer_Chocolate} title="Wafer Chocolate" />
-      <SlideProduct products={Milk_Chocolate_Bar} title="Milk Chocolate Bar" />
-      <SlideProduct products={Dark_Chocolate_Bar} title="Dark Chocolate Bar" />
-      <SlideProduct products={Chocolate_Gift_Pack} title="Chocolate Gift Pack" />
-      <SlideProduct products={Shaped_Chocolates} title="Shaped Chocolates" />
-      <SlideProduct products={Filled_Bar_Chocolate_Pack} title="Filled Bar Chocolate Pack" />
+      <div className='max-w-7xl mx-auto mt-6 px-3 sm:px-4 md:px-6'>
+        <SlideProduct products={product} title="All Products" />
+        <SlideProduct products={Wafer_Chocolate} title="Wafer Chocolate" />
+        <SlideProduct products={Milk_Chocolate_Bar} title="Milk Chocolate Bar" />
+        <SlideProduct products={Dark_Chocolate_Bar} title="Dark Chocolate Bar" />
+        <SlideProduct products={Chocolate_Gift_Pack} title="Chocolate Gift Pack" />
+        <SlideProduct products={Shaped_Chocolates} title="Shaped Chocolates" />
+        <SlideProduct products={Filled_Bar_Chocolate_Pack} title="Filled Bar Chocolate Pack" />
+      </div>
+
 
       <Footer />
     </div>
